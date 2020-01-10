@@ -1,53 +1,9 @@
 const inquirer = require("inquirer")
+const Manager = require("./lib/Manager")
+const Engineer = require("./lib/Engineer")
+const Intern = require("./lib/Intern")
 
-// inquirer.prompt([
-//     {
-//         type: "input",
-//         name: "name",
-//         message: "What is your name?"
-//     },
-//     {
-//         type: "input",
-//         name: "id",
-//         message: "What is your ID?"
-//     },
-//     {
-//         type: "input",
-//         name: "email",
-//         message: "What is your email?"
-//     },
-//     {
-//         type: "list",
-//         name: "role",
-//         message: "What is your role?",
-//         choices: ["Manager", "Engineer", "Intern"]
-//     },
-
-//     {
-//         type: "input",
-//         name: "github",
-//         message: "What is your github username?",
-//         when: function(answers){
-//             return answers.role === "Engineer"
-//         }
-//     },
-//     {
-//         type: "input",
-//         name: "officeNumber",
-//         message: "What is your office number?",
-//         when: function(answers){
-//             return answers.role === "Manager"
-//         }
-//     },
-//     {
-//         type: "input",
-//         name: "school",
-//         message: "What university do you attend?",
-//         when: function (answers){
-//             return answers.role === "Intern"
-//         }
-//     }
-// ])
+var info = []
 initialQuestions()
 
 function initialQuestions() {
@@ -73,7 +29,12 @@ function initialQuestions() {
             message: "What is your manager's office number?"
         }
         
-    ]).then(function(){
+    ]).then(function(response){
+        const manager = new Manager(
+            response.name, parseInt(response.id), response.email,parseInt(response.office)
+        )
+        info.push(manager)
+        console.log(info)
         whatType()
     })
 }
@@ -121,10 +82,16 @@ function engineerQuestions() {
         {
             type: "input",
             name: "github",
-            message: "What is your github username?"
+            message: "What is your engineer's github username?"
         }
 
-    ]).then(function(){
+    ]).then(function(response){
+        const engineer = new Engineer(
+            response.name, parseInt(response.id), response.email, response.github
+        )
+        info.push(engineer)
+        console.log(info)
+        // buildEmployeeCard(data, "engineer");
         whatType()
     })
 }
@@ -149,22 +116,24 @@ function internQuestions() {
         {
             type: "input",
             name: "school",
-            message: "What university do you attend?"
+            message: "What university does your intern attend?"
         }
                    
-    ]).then(function(){
+    ]).then(function(response){
+        const intern = new Intern(
+            response.name, parseInt(response.id), response.email, response.school
+        )
+        info.push(intern)
+        console.log(info)
+        // buildEmployeeCard(data, "intern");
+
         whatType()
     })
 }
 
-// initialQuestions().then(function(){
-//     whatType()
-// }).then(function (answers) {
-//     console.log(answers)
-//     if (answers.type === "Engineer") {
-//         engineerQuestions()
+
+// function buildEmployeeCard(arr, typeOfEmployee){
+//     if (typeOfEmployee === "engineer") {
+
 //     }
-//     else if (answers.type === "Intern"){
-//         internQuestions()
-//     }
-// })
+// }
