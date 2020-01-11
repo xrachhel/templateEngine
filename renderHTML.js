@@ -9,7 +9,7 @@ const writeFile = util.promisify(fs.writeFile)
 const readFile = util.promisify(fs.readFile)
 
 function createTemplate(template, key, value) {
-    const replace = new RegExp('{{' + key + '}}');
+    const replace = new RegExp("{{"+key+"}}");
     const newTemplate = template.replace(replace, value);
     return newTemplate;
 }
