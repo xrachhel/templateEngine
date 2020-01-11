@@ -87,7 +87,7 @@ This portion of the script file displays part of the inquirer prompts used to pr
 ## Authors
 
 **Rachel Yeung**
-
+* [Portfolio](https://xrachhel.github.io/updatedPortfolio/)
 * [Github](https://github.com/xrachhel)
 * [LinkedIn](https://www.linkedin.com/in/rachel-yeung-814986159/)
 
