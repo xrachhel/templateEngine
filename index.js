@@ -3,6 +3,8 @@ const Manager = require("./lib/Manager")
 const Engineer = require("./lib/Engineer")
 const Intern = require("./lib/Intern")
 
+const renderHTML = require("./renderHTML")
+
 var info = []
 initialQuestions()
 
@@ -31,7 +33,7 @@ function initialQuestions() {
         
     ]).then(function(response){
         const manager = new Manager(
-            response.name, parseInt(response.id), response.email,parseInt(response.office)
+            response.name, response.id, response.email,response.office
         )
         info.push(manager)
         console.log(info)
@@ -55,7 +57,7 @@ function whatType(){
             internQuestions()
         }
         else if(response.type === "I dont want to add anymore team members"){
-            return
+            renderHTML(info)
         }
     })
 }
@@ -87,7 +89,7 @@ function engineerQuestions() {
 
     ]).then(function(response){
         const engineer = new Engineer(
-            response.name, parseInt(response.id), response.email, response.github
+            response.name, response.id, response.email, response.github
         )
         info.push(engineer)
         console.log(info)
@@ -121,7 +123,7 @@ function internQuestions() {
                    
     ]).then(function(response){
         const intern = new Intern(
-            response.name, parseInt(response.id), response.email, response.school
+            response.name, response.id, response.email, response.school
         )
         info.push(intern)
         console.log(info)
