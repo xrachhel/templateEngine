@@ -16,6 +16,9 @@ This application allows a team manager to generate a webpage that displays their
 
 ## Demo
 run 'node index.js' in terminal
+
+
+
 ![gif](assets/recording.gif)
 
 Rendered HTML page:
