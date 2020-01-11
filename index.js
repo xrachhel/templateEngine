@@ -36,7 +36,6 @@ function initialQuestions() {
             response.name, response.id, response.email,response.office
         )
         info.push(manager)
-        console.log(info)
         whatType()
     })
 }
@@ -92,8 +91,6 @@ function engineerQuestions() {
             response.name, response.id, response.email, response.github
         )
         info.push(engineer)
-        console.log(info)
-        // buildEmployeeCard(data, "engineer");
         whatType()
     })
 }
@@ -126,16 +123,7 @@ function internQuestions() {
             response.name, response.id, response.email, response.school
         )
         info.push(intern)
-        console.log(info)
-        // buildEmployeeCard(data, "intern");
-
         whatType()
     })
 }
 
-
-// function buildEmployeeCard(arr, typeOfEmployee){
-//     if (typeOfEmployee === "engineer") {
-
-//     }
-// }
