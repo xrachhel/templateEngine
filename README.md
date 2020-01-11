@@ -8,10 +8,11 @@ This application allows a team manager to generate a webpage that displays their
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML): used for structuring and creating elements on the DOM
 * [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/): CSS and Javascript framework for front-end web development
-* [Javascript] (https://developer.mozilla.org/en-US/docs/Web/JavaScript): high level programming language
+* [Javscript](https://developer.mozilla.org/en-US/docs/Web/JavaScript): high level programming language
 * [Node.js](https://developer.mozilla.org/en-US/docs/Web/API/Node): Javascript runtime, allows users to run Javascript on the server
 * [Inquirer NPM](https://www.npmjs.com/package/inquirer): Command Line Interface for Node.js
-* [Jest] (https://jestjs.io/): Javascript testing framework
+* [Jest](https://jestjs.io/): Javascript testing framework
+
  
 
 ## Demo
@@ -81,7 +82,7 @@ function whatType(){
     })
 }
 ```
-This portion of the script file displays part of the inquirer prompts used to prompt the user for information. The function 'initialQuestions()' is called, which first prompts the user for information about the manager. That information is used to create a new object with all the listed methods in the class 'Manager', and this object is then pushed into an empty array named 'info', which will be later used to render the HTML page. The 'whatType()' function is run next, which will ask the user if they would like to enter information for another team member, and if they do, which kind. If the user chooses 'engineer', the function 'engineerQuestions()' will be run, which are inquirer prompts similar to 'initialQuestions()'. The same applies if the user chooses 'intern'. Once the user decides that they have entered every member in their team, they can decide 'I dont want to add anymore team members', and the renderHTML function will be run. 
+This portion of the script file displays part of the inquirer prompts used to prompt the user for information. The function 'initialQuestions()' is called, which first prompts the user for information about the manager. That information is used to create a new object with all the listed methods in the class 'Manager', and this object is then pushed into an empty array named 'info', which will be later used to render the HTML page. The 'whatType()' function is run next, which will ask the user if they would like to enter information for another team member, and if they do, which kind. If the user chooses 'engineer', the function 'engineerQuestions()' will be run, which are inquirer prompts similar to 'initialQuestions()'. The same applies if the user chooses 'intern'. Once the user decides that they have entered every member in their team, they can decide 'I dont want to add anymore team members', and the renderHTML function will be run to create the final HTML page with all the information. 
 
 ## Authors
 
