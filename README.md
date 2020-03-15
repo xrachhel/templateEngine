@@ -1,19 +1,8 @@
 # Template Engine
 
-## Description
-
 This application allows a team manager to generate a webpage that displays their team's basic information through Node CLI. The application will prompt the user for information about the team manager as well as the team members. The user can choose to input as many members as they want, with a mix of engineers and interns. Once the user has entered all the members of their team, a HTML page with all the information provided by the user will be created. The application is also tested through Jest.
 
-## Technologies Used
-
-* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML): used for structuring and creating elements on the DOM
-* [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/): CSS and Javascript framework for front-end web development
-* [Javscript](https://developer.mozilla.org/en-US/docs/Web/JavaScript): high level programming language
-* [Node.js](https://developer.mozilla.org/en-US/docs/Web/API/Node): Javascript runtime, allows users to run Javascript on the server
-* [Inquirer NPM](https://www.npmjs.com/package/inquirer): Command Line Interface for Node.js
-* [Jest](https://jestjs.io/): Javascript testing framework
-
- 
+![screenshot](assets/screenshot.png)
 
 ## Demo
 run 'node index.js' in terminal
@@ -22,9 +11,14 @@ run 'node index.js' in terminal
 
 ![gif](assets/recording.gif)
 
-Rendered HTML page:
-![screenshot](assets/screenshot.png)
+## Technologies Used
 
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML): used for structuring and creating elements on the DOM
+* [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/): CSS and Javascript framework for front-end web development
+* [JavScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript): used to create responsive, interactive elements on the page
+* [Node.js](https://developer.mozilla.org/en-US/docs/Web/API/Node): Javascript runtime, allows users to run Javascript on the server
+* [Inquirer NPM](https://www.npmjs.com/package/inquirer): Command Line Interface for Node.js
+* [Jest](https://jestjs.io/): JavaScript testing framework
 
 ## Code Snippet
 
@@ -87,7 +81,7 @@ This portion of the script file displays part of the inquirer prompts used to pr
 ## Authors
 
 **Rachel Yeung**
-* [Portfolio](https://xrachhel.github.io/updatedPortfolio/)
+* [Portfolio](https://rachelyeung.herokuapp.com/)
 * [Github](https://github.com/xrachhel)
 * [LinkedIn](https://www.linkedin.com/in/rachel-yeung-814986159/)
 
