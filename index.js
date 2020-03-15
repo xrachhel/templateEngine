@@ -1,3 +1,4 @@
+// Dependencies
 const inquirer = require("inquirer")
 const Manager = require("./lib/Manager")
 const Engineer = require("./lib/Engineer")
@@ -8,6 +9,7 @@ const renderHTML = require("./renderHTML")
 var info = []
 initialQuestions()
 
+// Initial questions for every user
 function initialQuestions() {
     inquirer.prompt([
         {
@@ -30,16 +32,17 @@ function initialQuestions() {
             name: "office",
             message: "What is your manager's office number?"
         }
-        
     ]).then(function(response){
+        // create new Manager object
         const manager = new Manager(
             response.name, response.id, response.email,response.office
         )
         info.push(manager)
         whatType()
     })
-}
+};
 
+// Question prompts for type of team member to add
 function whatType(){
     inquirer.prompt([
         {
@@ -59,10 +62,9 @@ function whatType(){
             renderHTML(info)
         }
     })
-}
+};
 
-
-
+// Prompts to add an Engineer
 function engineerQuestions() {
     inquirer.prompt([
         {
@@ -85,16 +87,17 @@ function engineerQuestions() {
             name: "github",
             message: "What is your engineer's github username?"
         }
-
     ]).then(function(response){
+        // Create new Engineer object
         const engineer = new Engineer(
             response.name, response.id, response.email, response.github
         )
         info.push(engineer)
         whatType()
-    })
-}
+    });
+};
 
+// Prompts to add an Intern
 function internQuestions() {
     inquirer.prompt([
         {
@@ -117,13 +120,13 @@ function internQuestions() {
             name: "school",
             message: "What university does your intern attend?"
         }
-                   
     ]).then(function(response){
+        // Create new Intern object
         const intern = new Intern(
             response.name, response.id, response.email, response.school
         )
         info.push(intern)
         whatType()
-    })
-}
+    });
+};
 

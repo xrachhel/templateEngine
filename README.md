@@ -45,15 +45,14 @@ function initialQuestions() {
             name: "office",
             message: "What is your manager's office number?"
         }
-        
     ]).then(function(response){
         const manager = new Manager(
             response.name, response.id, response.email,response.office
         )
         info.push(manager)
         whatType()
-    })
-}
+    });
+};
 
 function whatType(){
     inquirer.prompt([
@@ -73,8 +72,8 @@ function whatType(){
         else if(response.type === "I dont want to add anymore team members"){
             renderHTML(info)
         }
-    })
-}
+    });
+};
 ```
 This portion of the script file displays part of the inquirer prompts used to prompt the user for information. The function 'initialQuestions()' is called, which first prompts the user for information about the manager. That information is used to create a new object with all the listed methods in the class 'Manager', and this object is then pushed into an empty array named 'info', which will be later used to render the HTML page. The 'whatType()' function is run next, which will ask the user if they would like to enter information for another team member, and if they do, which kind. If the user chooses 'engineer', the function 'engineerQuestions()' will be run, which are inquirer prompts similar to 'initialQuestions()'. The same applies if the user chooses 'intern'. Once the user decides that they have entered every member in their team, they can decide 'I dont want to add anymore team members', and the renderHTML function will be run to create the final HTML page with all the information. 
 
